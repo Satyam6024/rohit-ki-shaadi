@@ -1,0 +1,94 @@
+/* ============================================================
+   LOADER — loader.css
+============================================================ */
+
+#loader {
+  position: fixed;
+  inset: 0;
+  background: var(--black);
+  z-index: 10000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+  transition: opacity 0.7s ease, transform 0.7s ease;
+  padding: var(--space-md);
+  text-align: center;
+  /* Make the entire loader a tap target — unlocks audio on touch */
+  cursor: pointer;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+#loader.hidden {
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(1.04);
+}
+
+.loader-skull {
+  font-size: clamp(52px, 12vw, 72px);
+  animation: loader-wobble 2s ease-in-out infinite;
+}
+
+@keyframes loader-wobble {
+  0%, 100% { transform: rotate(-8deg) scale(1);    }
+  50%       { transform: rotate(8deg)  scale(1.12); }
+}
+
+.loader-headline {
+  font-family: var(--font-display);
+  font-size: clamp(24px, 7vw, 60px);
+  color: #fff;
+  letter-spacing: 6px;
+  line-height: 1.1;
+}
+
+.loader-headline span { color: var(--orange); }
+
+.loader-sub {
+  font-family: var(--font-mono);
+  font-size: clamp(10px, 2.5vw, 12px);
+  letter-spacing: 4px;
+  color: #555;
+  text-transform: uppercase;
+  animation: blink 1s steps(1) infinite;
+}
+
+/* "Tap anywhere" hint — appears after 1.5s so user knows to interact */
+.loader-tap-hint {
+  font-family: var(--font-mono);
+  font-size: clamp(9px, 2vw, 11px);
+  letter-spacing: 3px;
+  color: #c6c6c6;
+  text-transform: uppercase;
+  margin-top: -12px;
+  opacity: 0;
+  animation: hint-appear 0.5s ease 1.5s forwards;
+}
+
+@keyframes hint-appear {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: none; }
+}
+
+.loader-bar {
+  width: min(260px, 80vw);
+  height: 5px;
+  background: #1e1e1e;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.loader-fill {
+  height: 100%;
+  background: var(--orange);
+  border-radius: 3px;
+  animation: fill-bar 5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+@keyframes fill-bar {
+  from { width: 0;    }
+  to   { width: 100%; }
+}

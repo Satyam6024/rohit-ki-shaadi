@@ -1,0 +1,384 @@
+/* ============================================================
+   RESPONSIVE — responsive.css
+   Breakpoints:
+     Mini:    ≤ 360px
+     Mobile:  ≤ 480px
+     Tablet:  481px – 768px
+     Desktop: > 768px  (base styles in other files)
+
+   Load order: ALWAYS last — overrides everything above.
+============================================================ */
+
+/* ════════════════════════════════════════════
+   SHARED FIXES (all non-desktop)
+════════════════════════════════════════════ */
+@media (max-width: 768px) {
+
+  /* Sound button — smaller */
+  #sound-btn {
+    top: 12px;
+    right: 12px;
+    padding: 7px 14px;
+    font-size: 10px;
+    letter-spacing: 1px;
+  }
+
+  /* Scroll hint — clear of sound btn */
+  .scroll-hint {
+    bottom: 16px;
+    font-size: 10px;
+  }
+
+  /* Cards: 2-col */
+  .cards-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+  }
+
+  /* Why grid: 2-col */
+  .why-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+
+  /* Git box */
+  .git-box {
+    font-size: 11px;
+    line-height: 1.9;
+  }
+
+  /* Warn box: needs margin from grid above */
+  .warn-box {
+    margin-top: 24px;
+  }
+}
+
+
+/* ════════════════════════════════════════════
+   MOBILE  (≤ 480px)
+════════════════════════════════════════════ */
+@media (max-width: 480px) {
+
+  /* ── Sound btn: icon only to save space ── */
+  #sound-btn {
+    top: 10px;
+    right: 10px;
+    padding: 6px 12px;
+    font-size: 10px;
+    letter-spacing: 0px;
+  }
+
+  /* ── Hero ── */
+  #hero {
+    padding: 72px 16px 64px;
+  }
+
+  .breaking-pill {
+    font-size: 9px;
+    letter-spacing: 3px;
+    padding: 7px 14px;
+    margin-bottom: 20px;
+  }
+
+  .hero-title {
+    font-size: clamp(40px, 11vw, 56px);
+    line-height: 0.92;
+    margin-bottom: 12px;
+  }
+
+  /* Photo pair */
+  .photo-pair {
+    gap: 10px;
+    margin-top: 24px;
+    margin-bottom: 0;
+  }
+
+  .photo-frame {
+    width: 108px;
+    height: 136px;
+    border-width: 3px;
+    border-radius: 12px;
+  }
+
+  .photo-placeholder {
+    font-size: 38px;
+  }
+
+  .photo-label-bar {
+    font-size: 11px;
+    letter-spacing: 2px;
+    padding: 5px;
+  }
+
+  .plus-bubble {
+    width: 34px;
+    height: 34px;
+    font-size: 18px;
+    border-width: 3px;
+  }
+
+  .hero-card {
+    padding: 14px 16px;
+    font-size: 13px;
+    margin: 18px auto;
+  }
+
+  /* ── Loader ── */
+  .loader-headline {
+    letter-spacing: 3px;
+    font-size: clamp(22px, 7vw, 36px);
+  }
+
+  .loader-sub {
+    font-size: 10px;
+    letter-spacing: 3px;
+  }
+
+  /* ── EXE Section ── */
+  .git-box {
+    padding: 14px 14px;
+    font-size: 10px;
+    line-height: 1.85;
+    border-radius: 10px;
+  }
+
+  .loc-pill {
+    font-size: 11px;
+    padding: 8px 16px;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .sticker-tag {
+    font-size: 11px;
+    padding: 7px 14px;
+  }
+
+  /* ── Countdown ── */
+  .cd-title {
+    font-size: clamp(13px, 3.5vw, 18px);
+    letter-spacing: 2px;
+    margin-bottom: 28px;
+  }
+
+  .cd-grid {
+    gap: 8px;
+  }
+
+  .cd-box {
+    min-width: 70px;
+    padding: 12px 14px;
+    border-width: 3px;
+    border-radius: 12px;
+    box-shadow: 4px 4px 0 var(--black);
+  }
+
+  .cd-num {
+    font-size: 38px;
+  }
+
+  .cd-label {
+    font-size: 8px;
+    letter-spacing: 2px;
+  }
+
+  /* ── Detail Cards ── */
+  .cards-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    padding: 0 4px;
+  }
+
+  .dcard {
+    padding: 22px 18px;
+  }
+
+  .dc-title {
+    font-size: 34px;
+  }
+
+  .dc-body {
+    font-size: 12px;
+  }
+
+  /* ── Rules ── */
+  .rules-wrap {
+    padding: 0 4px;
+  }
+
+  .rule-row {
+    gap: 12px;
+    padding: 16px 0;
+    font-size: 13px;
+  }
+
+  .rn {
+    min-width: 34px;
+    font-size: 30px;
+  }
+
+  /* ── Why Attend ── */
+  .why-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 0 4px;
+  }
+
+  .wc-icon {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+
+  .warn-box {
+    padding: 18px 16px;
+    margin-top: 20px;
+  }
+
+  /* ── Scandal section ── */
+  .scandal-title-main {
+    font-size: clamp(30px, 9vw, 52px);
+    letter-spacing: 2px;
+  }
+
+  .scandal-sub {
+    font-size: 12px;
+    padding: 0 12px;
+  }
+
+  .scandal-open-btn,
+  a.scandal-open-btn {
+    padding: 12px 28px;
+    font-size: 12px;
+    letter-spacing: 1px;
+  }
+
+  /* ── Final section ── */
+  .final-quote {
+    font-size: clamp(26px, 8vw, 44px);
+    letter-spacing: 2px;
+    padding: 0 8px;
+  }
+
+  .payment-chips {
+    gap: 8px;
+    padding: 0 8px;
+  }
+
+  .p-chip {
+    padding: 9px 18px;
+    font-size: 12px;
+    box-shadow: 2px 2px 0 var(--black);
+  }
+
+  .htag {
+    padding: 7px 14px;
+    font-size: 11px;
+  }
+
+  /* ── Footer ── */
+  footer {
+    font-size: 10px;
+    letter-spacing: 1px;
+    line-height: 1.9;
+  }
+}
+
+
+/* ════════════════════════════════════════════
+   MINI  (≤ 360px)
+════════════════════════════════════════════ */
+@media (max-width: 360px) {
+
+  .hero-title {
+    font-size: 36px;
+  }
+
+  .display-title {
+    font-size: 40px;
+    letter-spacing: 2px;
+  }
+
+  /* Stack photo pair vertically on tiny screens */
+  .photo-pair {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .photo-frame {
+    width: 150px;
+    height: 180px;
+  }
+
+  /* Rotate + to | for vertical stack */
+  .plus-bubble {
+    transform: rotate(90deg);
+  }
+
+  .cd-box {
+    min-width: 60px;
+    padding: 10px 10px;
+  }
+
+  .cd-num {
+    font-size: 32px;
+  }
+
+  .git-box {
+    font-size: 9px;
+    padding: 12px 10px;
+  }
+
+  .cards-grid {
+    padding: 0;
+  }
+
+  .sticker-tag {
+    font-size: 10px;
+    padding: 6px 12px;
+  }
+}
+
+
+/* ════════════════════════════════════════════
+   TOUCH DEVICES — disable hover transforms
+   (hover states feel broken on tap)
+════════════════════════════════════════════ */
+@media (hover: none) {
+  .rule-row:hover    { transform: none; }
+  .dcard:hover       { transform: none; box-shadow: none; }
+  .why-card:hover    { transform: none; }
+  .photo-frame:hover { transform: none; }
+  .p-chip:hover      { transform: none; }
+  .htag:hover        { transform: none; }
+  .ev-row:hover      { background: transparent; padding-left: 8px; }
+}
+
+
+/* ════════════════════════════════════════════
+   LANDSCAPE PHONE (short viewport, wide)
+════════════════════════════════════════════ */
+@media (max-height: 500px) and (orientation: landscape) {
+  #hero {
+    min-height: auto;
+    padding: 80px 24px 48px;
+  }
+
+  .hero-title {
+    font-size: clamp(32px, 8vw, 52px);
+    margin-bottom: 10px;
+  }
+
+  .photo-pair {
+    margin: 16px auto 12px;
+  }
+
+  .photo-frame {
+    height: 100px;
+    width: 80px;
+  }
+
+  .scroll-hint {
+    display: none;
+  }
+}

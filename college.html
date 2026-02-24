@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Rohit's college memories archive: solo, birthday, crazy moments, group photos, and videos." />
+  <title>Rohit's College Memories</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Mono:wght@400;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="css/college.css?v=7" />
+</head>
+<body>
+  <header class="hero">
+    <p class="hero-kicker">Classified Archive</p>
+    <h1>Rohit's College Memories</h1>
+    <p class="hero-sub">
+      Real photos and videos grouped by timeline and mood.
+      Solo shots, birthday scenes, crazy moments, full group photos, and video dumps.
+    </p>
+    <div class="hero-stats">
+      <div><span id="stat-photos">0</span> Photos</div>
+      <div><span id="stat-videos">0</span> Videos</div>
+      <div>2018 - 2023</div>
+    </div>
+  </header>
+
+  <nav class="top-nav">
+    <a href="#solo" data-target="solo">Rohit Solo</a>
+    <a href="#birthday" data-target="birthday">Birthday</a>
+    <a href="#crazy" data-target="crazy">Crazy Stuff</a>
+    <a href="#group" data-target="group">Group Photos</a>
+    <a href="#videos" data-target="videos">Videos</a>
+    <a href="scandal.html" class="back-link">Back</a>
+  </nav>
+
+  <main class="page">
+    <section id="solo" data-nav-id="solo" class="media-section">
+      <h2>Rohit Solo Photos</h2>
+      <div class="media-grid" id="grid-solo"></div>
+    </section>
+
+    <section id="birthday" data-nav-id="birthday" class="media-section">
+      <h2>Birthday Memories</h2>
+      <div class="media-grid" id="grid-birthday"></div>
+    </section>
+
+    <section id="crazy" data-nav-id="crazy" class="media-section">
+      <h2>Crazy Stuff</h2>
+      <div class="media-grid" id="grid-crazy"></div>
+    </section>
+
+    <section id="group" data-nav-id="group" class="media-section">
+      <h2>Group Photos</h2>
+      <div class="media-grid" id="grid-group"></div>
+    </section>
+
+    <section id="videos" data-nav-id="videos" class="media-section">
+      <h2>Videos</h2>
+      <div class="media-grid video-grid" id="grid-videos"></div>
+    </section>
+  </main>
+
+  <div id="lightbox" class="lightbox" aria-hidden="true">
+    <button id="lb-close" class="lb-close" type="button">x</button>
+    <div class="lb-shell">
+      <div id="lb-media-wrap" class="lb-media-wrap"></div>
+      <p id="lb-caption" class="lb-caption"></p>
+    </div>
+  </div>
+
+  <script src="js/college.js?v=7"></script>
+</body>
+</html>

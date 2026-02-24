@@ -1,0 +1,122 @@
+/* ============================================================
+   FINAL SECTION + FOOTER — final.css
+============================================================ */
+
+/* ── Final Section ── */
+#final {
+  background: #fff;
+  padding: var(--section-pad);
+  text-align: center;
+}
+
+.final-body-text {
+  max-width: 480px;
+  margin: 16px auto;
+  opacity: 0.65;
+  line-height: 1.9;
+  font-size: clamp(12px, 2.5vw, 13px);
+  font-family: var(--font-mono);
+}
+
+/* ── Payment Chips ── */
+.payment-chips {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+  max-width: 600px;
+  margin: 36px auto;
+  padding: 0 var(--space-sm);
+}
+
+.p-chip {
+  background: var(--cream);
+  border: 3px solid var(--black);
+  border-radius: var(--radius-pill);
+  padding: 11px 28px;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: clamp(12px, 2.5vw, 14px);
+  box-shadow: 3px 3px 0 var(--black);
+  transition: transform 0.2s;
+  cursor: default;
+}
+
+.p-chip:hover {
+  transform: scale(1.06) rotate(-2deg);
+}
+
+/* ── Final Quote ── */
+.final-quote {
+  font-family: var(--font-display);
+  font-size: clamp(32px, 7vw, 72px);
+  line-height: 1.05;
+  letter-spacing: 3px;
+  max-width: 700px;
+  margin: 48px auto 0;
+  padding: 0 var(--space-sm);
+}
+
+.final-quote .ul {
+  text-decoration: underline;
+  text-decoration-color: var(--orange);
+}
+
+.final-cta {
+  margin: 22px auto;
+  font-family: var(--font-mono);
+  font-size: clamp(14px, 3vw, 16px);
+  opacity: 0.65;
+}
+
+/* ── Hashtag Wall ── */
+.hashtag-wall {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  max-width: 720px;
+  margin: 52px auto 0;
+  padding: 0 var(--space-sm);
+}
+
+.htag {
+  background: var(--black);
+  color: #fff;
+  padding: 9px 22px;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-mono);
+  font-size: clamp(11px, 2.5vw, 13px);
+  font-weight: 700;
+  border: 2px solid var(--black);
+  cursor: pointer;
+  transition: all 0.2s;
+  user-select: none;
+}
+
+.htag:hover {
+  background: var(--orange);
+  border-color: var(--orange);
+  transform: scale(1.08);
+}
+
+.htag.copied {
+  background: var(--green);
+  border-color: var(--green);
+}
+
+/* ── Footer ── */
+footer {
+  background: var(--black);
+  color: #333;
+  text-align: center;
+  padding: clamp(28px, 5vw, 40px) 20px;
+  font-family: var(--font-mono);
+  font-size: clamp(10px, 2vw, 11px);
+  letter-spacing: 2px;
+  line-height: 2;
+}
+
+footer span {
+  color: var(--orange);
+}

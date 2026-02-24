@@ -1,0 +1,188 @@
+/* ============================================================
+   HERO SECTION — hero.css
+============================================================ */
+
+#hero {
+  min-height: 100vh;
+  background: var(--cream);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 100px clamp(16px, 5vw, 40px) 80px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ── Breaking News Pill ── */
+.breaking-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--red);
+  color: #fff;
+  padding: 8px 24px;
+  border-radius: 6px;
+  font-family: var(--font-mono);
+  font-size: clamp(10px, 2.5vw, 12px);
+  font-weight: 700;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  margin-bottom: 32px;
+  animation: pill-pulse 1.8s ease infinite;
+}
+
+@keyframes pill-pulse {
+  0%, 100% { box-shadow: 0 0 0 0   rgba(255, 59, 48, 0.7); }
+  50%       { box-shadow: 0 0 0 14px rgba(255, 59, 48, 0);   }
+}
+
+.red-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #fff;
+  flex-shrink: 0;
+  animation: blink 1s steps(1) infinite;
+}
+
+/* ── Hero Title ── */
+.hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(48px, 12vw, 130px);
+  line-height: 0.88;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.hero-title .line-strike {
+  text-decoration: line-through;
+  opacity: 0.3;
+}
+
+.hero-title .line-o {
+  color: var(--orange);
+}
+
+/* ── Photo Pair ── */
+.photo-pair {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin: 40px auto 16px;
+  flex-wrap: wrap;
+}
+
+.photo-frame {
+  width: clamp(120px, 25vw, 160px);
+  height: clamp(150px, 32vw, 200px);
+  border: 4px solid var(--black);
+  border-radius: 16px;
+  background: #ececec;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: transform 0.2s;
+  flex-shrink: 0;
+}
+
+.photo-frame:hover {
+  transform: scale(1.04) rotate(-2deg);
+}
+
+.photo-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  display: none;
+}
+
+.photo-placeholder {
+  font-size: clamp(36px, 8vw, 52px);
+  animation: stk-float 3s ease-in-out infinite;
+}
+
+.photo-label-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--black);
+  color: #fff;
+  font-family: var(--font-display);
+  font-size: clamp(13px, 3vw, 16px);
+  letter-spacing: 3px;
+  padding: 6px;
+  text-align: center;
+}
+
+/* ── Photo loaded state ── */
+/* To use: add class "loaded" to .photo-frame + set <img src="your-file.jpg"> */
+.photo-frame.loaded img              { display: block; }
+.photo-frame.loaded .photo-placeholder { display: none; }
+
+.plus-bubble {
+  width: clamp(40px, 8vw, 52px);
+  height: clamp(40px, 8vw, 52px);
+  border-radius: 50%;
+  background: var(--orange);
+  border: 4px solid var(--black);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: clamp(22px, 5vw, 28px);
+  color: #fff;
+  box-shadow: var(--shadow);
+  flex-shrink: 0;
+}
+
+/* ── Hero info card ── */
+.hero-card {
+  background: white;
+  border: 3px solid var(--black);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: clamp(16px, 4vw, 24px) clamp(20px, 5vw, 32px);
+  max-width: 640px;
+  width: 100%;
+  margin: 24px auto;
+  font-size: clamp(14px, 2.5vw, 18px);
+  line-height: 1.7;
+}
+
+.hero-card em {
+  font-style: normal;
+  color: var(--orange);
+  font-weight: 700;
+}
+
+/* ── Scroll hint ── */
+.scroll-hint {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 11px;
+  letter-spacing: 3px;
+  opacity: 0.4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  animation: hint-bounce 2s ease infinite;
+  white-space: nowrap;
+}
+
+@keyframes hint-bounce {
+  0%, 100% { transform: translateX(-50%) translateY(0);  }
+  50%       { transform: translateX(-50%) translateY(8px); }
+}

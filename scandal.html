@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Rohit ki life ke sabse embarrassing moments. Parody site." />
+  <title>RohitHub Premium — Exclusive Content 🔞</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+
+  <!-- Scandal page styles -->
+  <link rel="stylesheet" href="css/scandal-page.css?v=6" />
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════════
+       VERIFICATION GATE
+       College identity check — not an age gate.
+       "Yes" → college.html
+       "No"  → back to index.html
+  ══════════════════════════════════════════ -->
+  <div id="age-gate">
+    <div class="age-gate-box">
+      <div class="gate-logo">ROHIT<span>HUB</span></div>
+      <div class="gate-warning-icon">🎓</div>
+      <div class="gate-title">ACCESS VERIFICATION</div>
+      <div class="gate-sub">
+        This section contains <em>classified college-era footage</em> of
+        <em>Rohit</em> — back when he had free time, zero responsibilities,
+        and absolutely no idea Neha would one day say yes to him.<br><br>
+        <strong>Are you one of Rohit's college friends?</strong><br>
+        Only ex-classmates, hostel buddies &amp; lab partners are allowed inside. 🔐
+      </div>
+      <div class="gate-btns">
+        <button class="gate-yes" id="age-yes">🎓 YES, I'M HIS COLLEGEMATE</button>
+        <button class="gate-no"  id="age-no">🚫 NO, I'M NOT HIS COLLEGEMATE</button>
+      </div>
+      <div class="gate-disclaimer">
+        Disclaimer: By entering you confirm you survived at least one semester with this man.
+        All content is parody. Rohit's dignity has already left the chat.
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ══════════════════════════════════════════
+       HEADER
+  ══════════════════════════════════════════ -->
+  <header id="sp-header">
+    <div class="header-inner">
+
+      <!-- Logo -->
+      <div class="sp-logo">
+        ROHIT<span>HUB</span>
+        <span class="badge">🔴 LIVE</span>
+      </div>
+
+      <!-- Search -->
+      <div class="header-search">
+        <input type="text" placeholder="Search for receipts..." />
+        <button onclick="handleSearch()">🔍</button>
+      </div>
+
+      <!-- Actions -->
+      <div class="header-actions">
+        <a href="index.html" class="btn-back">← Back to Shaadi</a>
+        <button class="btn-signup" onclick="handleSubscribe()">JOIN PREMIUM</button>
+      </div>
+
+    </div>
+  </header>
+
+
+  <!-- ══════════════════════════════════════════
+       CATEGORY NAV
+  ══════════════════════════════════════════ -->
+  <nav class="category-bar">
+    <div class="category-bar-inner">
+      <div class="cat-link active" onclick="setCategory(this)">🔥 TOP ROHIT</div>
+      <div class="cat-link" onclick="setCategory(this)">😴 NIGHT SHIFT</div>
+      <div class="cat-link" onclick="setCategory(this)">☕ CHAI CONTENT</div>
+      <div class="cat-link" onclick="setCategory(this)">💍 PROPOSAL FAILS</div>
+      <div class="cat-link" onclick="setCategory(this)">🎮 GAMING HOURS</div>
+      <div class="cat-link" onclick="setCategory(this)">💪 GYM CONTENT</div>
+      <div class="cat-link" onclick="setCategory(this)">🍳 COOKING DISASTER</div>
+      <div class="cat-link" onclick="setCategory(this)">📱 DM RECEIPTS</div>
+    </div>
+  </nav>
+
+
+  <!-- ══════════════════════════════════════════
+       HERO BANNER
+  ══════════════════════════════════════════ -->
+  <div class="sp-hero-banner">
+    <div class="banner-eyebrow">🔐 EXCLUSIVE CONTENT UNLOCKED</div>
+    <div class="banner-title">
+      ROHIT'S <span>FULL ARCHIVE</span><br />SHAADI SE PEHLE
+    </div>
+    <div class="banner-sub">
+      The most embarrassing, cringe-worthy, and absolutely iconic moments from one man's
+      journey from "B.Tech graduate" to "someone Neha is actually marrying."
+      All footage is real. Names have not been changed. Rohit knows.
+    </div>
+    <div class="banner-stats">
+      <div class="b-stat">
+        <div class="b-stat-num">69</div>
+        <div class="b-stat-label">Videos</div>
+      </div>
+      <div class="b-stat">
+        <div class="b-stat-num">420</div>
+        <div class="b-stat-label">Photos</div>
+      </div>
+      <div class="b-stat">
+        <div class="b-stat-num">34</div>
+        <div class="b-stat-label">Chai Breaks</div>
+      </div>
+      <div class="b-stat">
+        <div class="b-stat-num">∞</div>
+        <div class="b-stat-label">Cringe Level</div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ══════════════════════════════════════════
+       MAIN CONTENT + SIDEBAR
+  ══════════════════════════════════════════ -->
+  <div class="sp-main">
+
+    <!-- ── CONTENT COLUMN ── -->
+    <div class="sp-content">
+
+      <!-- ════ VIDEO SECTION ════ -->
+      <div class="sp-section">
+        <div class="sp-section-header">
+          <div class="sp-section-title">
+            <span class="fire">🎬</span> LEAKED VIDEOS
+          </div>
+          <div class="sp-view-all">View All →</div>
+        </div>
+
+        <div class="video-grid">
+
+          <!-- Video 1 — Free -->
+          <div class="video-card" data-content="v1">
+            <div class="thumb">
+              <div class="thumb-emoji">😴☕🌙</div>
+              <div class="thumb-blur">
+                <div class="play-icon">▶</div>
+                <div class="thumb-label">Click to Reveal</div>
+              </div>
+              <div class="hot-badge">🔥 HOT</div>
+              <div class="duration-badge">47:00</div>
+            </div>
+            <div class="card-info">
+              <div class="card-title">Rohit's Night Shift Survival Guide (3AM Edition)</div>
+              <div class="card-meta">
+                <span class="card-views">👁 2.4M views</span>
+                <span class="card-rating">⭐ 9.6</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Video 2 — Free -->
+          <div class="video-card" data-content="v2">
+            <div class="thumb">
+              <div class="thumb-emoji">💍😰🙏</div>
+              <div class="thumb-blur">
+                <div class="play-icon">▶</div>
+                <div class="thumb-label">Click to Reveal</div>
+              </div>
+              <div class="duration-badge">3:47</div>
+            </div>
+            <div class="card-info">
+              <div class="card-title">The Proposal: Raw Uncut Behind-The-Scenes Footage</div>
+              <div class="card-meta">
+                <span class="card-views">👁 8.1M views</span>
+                <span class="card-rating">⭐ 10.0</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Video 3 — Free -->
+          <div class="video-card" data-content="v3">
+            <div class="thumb">
+              <div class="thumb-emoji">🍳💥🔥</div>
+              <div class="thumb-blur">
+                <div class="play-icon">▶</div>
+                <div class="thumb-label">Click to Reveal</div>
+              </div>
+              <div class="hot-badge">😂 VIRAL</div>
+              <div class="duration-badge">4:12</div>
+            </div>
+            <div class="card-info">
+              <div class="card-title">Rohit Ka Cooking Show — Pilot Episode (Cancelled)</div>
+              <div class="card-meta">
+                <span class="card-views">👁 15.3M views</span>
+                <span class="card-rating">⭐ 9.9</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Video 4 — Locked/Premium -->
+          <div class="video-card locked" data-content="v4">
+            <div class="thumb">
+              <div class="thumb-emoji">💪🏋️😅</div>
+              <div class="thumb-blur">
+                <div class="lock-icon">🔒</div>
+                <div class="thumb-label">PREMIUM</div>
+                <button class="unlock-btn" onclick="handleSubscribe()">UNLOCK</button>
+              </div>
+              <div class="duration-badge">5yr</div>
+            </div>
+            <div class="card-info">
+              <div class="card-title">Gym Registration 2019–2024: A Five Year Documentary</div>
+              <div class="card-meta">
+                <span class="card-views">👁 3.2M views</span>
+                <span class="card-rating">⭐ 9.7</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Video 5 — Free -->
+          <div class="video-card" data-content="v5">
+            <div class="thumb">
+              <div class="thumb-emoji">🙏💒❤️</div>
+              <div class="thumb-blur">
+                <div class="play-icon">▶</div>
+                <div class="thumb-label">Click to Reveal</div>
+              </div>
+              <div class="hot-badge">🧡 SWEET</div>
+              <div class="duration-badge">∞</div>
+            </div>
+            <div class="card-info">
+              <div class="card-title">Neha Ki Meherbani — Uncut, Unfiltered (Still Loading)</div>
+              <div class="card-meta">
+                <span class="card-views">👁 99.9M views</span>
+                <span class="card-rating">⭐ ∞</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Video 6 — Locked -->
+          <div class="video-card locked" data-content="v6">
+            <div class="thumb">
+              <div class="thumb-emoji">📱❤️😬</div>
+              <div class="thumb-blur">
+                <div class="lock-icon">🔒</div>
+                <div class="thumb-label">PREMIUM</div>
+                <button class="unlock-btn" onclick="handleSubscribe()">UNLOCK</button>
+              </div>
+              <div class="duration-badge">2018</div>
+            </div>
+            <div class="card-info">
+              <div class="card-title">Rohit's Dating Profile 2018 — The Original Leaked Bio</div>
+              <div class="card-meta">
+                <span class="card-views">👁 4.7M views</span>
+                <span class="card-rating">⭐ 9.4</span>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /video-grid -->
+      </div><!-- /video section -->
+
+
+      <!-- ════ PHOTO SECTION ════ -->
+      <div class="sp-section">
+        <div class="sp-section-header">
+          <div class="sp-section-title">
+            <span class="fire">📸</span> PHOTO COLLECTION
+          </div>
+          <div class="sp-view-all">View All →</div>
+        </div>
+
+        <div class="photo-grid">
+
+          <div class="photo-card" data-content="p1">
+            <div class="photo-emoji-bg">😵🌅😪</div>
+            <div class="photo-overlay">
+              <div class="photo-eye">👁</div>
+              <div class="photo-label">Tap to View</div>
+            </div>
+            <div class="photo-caption">Morning Edition</div>
+          </div>
+
+          <div class="photo-card" data-content="p2">
+            <div class="photo-emoji-bg">🤳💪📸</div>
+            <div class="photo-overlay">
+              <div class="photo-eye">👁</div>
+              <div class="photo-label">Tap to View</div>
+            </div>
+            <div class="photo-caption">The Annual Gym Selfie</div>
+          </div>
+
+          <div class="photo-card" data-content="p3">
+            <div class="photo-emoji-bg">💻🔖😵</div>
+            <div class="photo-overlay">
+              <div class="photo-eye">🔒</div>
+              <div class="photo-label">PREMIUM</div>
+            </div>
+            <div class="photo-caption">247 Browser Tabs</div>
+          </div>
+
+          <div class="photo-card" data-content="p4">
+            <div class="photo-emoji-bg">☕☕☕</div>
+            <div class="photo-overlay">
+              <div class="photo-eye">👁</div>
+              <div class="photo-label">Tap to View</div>
+            </div>
+            <div class="photo-caption">The Chai Collection</div>
+          </div>
+
+          <div class="photo-card" data-content="p1">
+            <div class="photo-emoji-bg">🎮🌙💀</div>
+            <div class="photo-overlay">
+              <div class="photo-eye">👁</div>
+              <div class="photo-label">Tap to View</div>
+            </div>
+            <div class="photo-caption">3AM Gaming Session</div>
+          </div>
+
+          <div class="photo-card" data-content="p2">
+            <div class="photo-emoji-bg">🍜✨😁</div>
+            <div class="photo-overlay">
+              <div class="photo-eye">🔒</div>
+              <div class="photo-label">PREMIUM</div>
+            </div>
+            <div class="photo-caption">Maggi Masterchef</div>
+          </div>
+
+          <div class="photo-card" data-content="p3">
+            <div class="photo-emoji-bg">😴🛋️📺</div>
+            <div class="photo-overlay">
+              <div class="photo-eye">👁</div>
+              <div class="photo-label">Tap to View</div>
+            </div>
+            <div class="photo-caption">Netflix & Nap</div>
+          </div>
+
+          <div class="photo-card" data-content="p4">
+            <div class="photo-emoji-bg">💍😰🎉</div>
+            <div class="photo-overlay">
+              <div class="photo-eye">👁</div>
+              <div class="photo-label">Tap to View</div>
+            </div>
+            <div class="photo-caption">She Said Yes??</div>
+          </div>
+
+          <div class="photo-card" data-content="p1">
+            <div class="photo-emoji-bg">🚿🎤🎵</div>
+            <div class="photo-overlay">
+              <div class="photo-eye">🔒</div>
+              <div class="photo-label">PREMIUM</div>
+            </div>
+            <div class="photo-caption">Shower Concert</div>
+          </div>
+
+        </div><!-- /photo-grid -->
+      </div><!-- /photo section -->
+
+
+      <!-- ════ AUDIO SECTION ════ -->
+      <div class="sp-section">
+        <div class="sp-section-header">
+          <div class="sp-section-title">
+            <span class="fire">🎙️</span> AUDIO RECORDINGS
+          </div>
+          <div class="sp-view-all">View All →</div>
+        </div>
+
+        <div class="audio-list">
+
+          <div class="audio-track" data-content="a1">
+            <div class="track-play-btn">▶</div>
+            <div class="track-info">
+              <div class="track-title">Rohit's Voicemail to Neha — The One That Started Everything</div>
+              <div class="track-meta">🎙️ Voice Note · 2018 · 2.4M plays</div>
+            </div>
+            <div class="track-wave">
+              <div class="wave-bar" style="height:8px"></div>
+              <div class="wave-bar" style="height:18px"></div>
+              <div class="wave-bar" style="height:12px"></div>
+              <div class="wave-bar" style="height:22px"></div>
+              <div class="wave-bar" style="height:9px"></div>
+              <div class="wave-bar" style="height:16px"></div>
+              <div class="wave-bar" style="height:11px"></div>
+            </div>
+            <div class="track-duration">2:14</div>
+          </div>
+
+          <div class="audio-track" data-content="a2">
+            <div class="track-play-btn">▶</div>
+            <div class="track-info">
+              <div class="track-title">Rohit Sings in the Shower — Arijit Singh (Wrong Lyrics)</div>
+              <div class="track-meta">🎙️ Live Recording · Neighbors Confirmed · 8.8M plays</div>
+            </div>
+            <div class="track-wave">
+              <div class="wave-bar" style="height:20px"></div>
+              <div class="wave-bar" style="height:10px"></div>
+              <div class="wave-bar" style="height:24px"></div>
+              <div class="wave-bar" style="height:14px"></div>
+              <div class="wave-bar" style="height:18px"></div>
+              <div class="wave-bar" style="height:8px"></div>
+              <div class="wave-bar" style="height:22px"></div>
+            </div>
+            <div class="track-duration">7:33</div>
+          </div>
+
+          <div class="audio-track" data-content="a3">
+            <div class="track-play-btn">▶</div>
+            <div class="track-info">
+              <div class="track-title">3AM Gaming Session — "Ek Aur Game" (Recorded by Neha)</div>
+              <div class="track-meta">🎙️ Security Recording · Timed by Neha · 12.1M plays</div>
+            </div>
+            <div class="track-wave">
+              <div class="wave-bar" style="height:14px"></div>
+              <div class="wave-bar" style="height:24px"></div>
+              <div class="wave-bar" style="height:8px"></div>
+              <div class="wave-bar" style="height:20px"></div>
+              <div class="wave-bar" style="height:16px"></div>
+              <div class="wave-bar" style="height:22px"></div>
+              <div class="wave-bar" style="height:10px"></div>
+            </div>
+            <div class="track-duration">6:00</div>
+          </div>
+
+          <div class="audio-track" data-content="a1">
+            <div class="track-play-btn">▶</div>
+            <div class="track-info">
+              <div class="track-title">🔒 PREMIUM: Rohit Explains Why He Needs "Just One More Hour"</div>
+              <div class="track-meta">🎙️ Locked · Premium Only · 3.3M plays</div>
+            </div>
+            <div class="track-wave">
+              <div class="wave-bar" style="height:16px"></div>
+              <div class="wave-bar" style="height:20px"></div>
+              <div class="wave-bar" style="height:10px"></div>
+              <div class="wave-bar" style="height:18px"></div>
+              <div class="wave-bar" style="height:24px"></div>
+              <div class="wave-bar" style="height:12px"></div>
+              <div class="wave-bar" style="height:8px"></div>
+            </div>
+            <div class="track-duration">1:23</div>
+          </div>
+
+        </div><!-- /audio-list -->
+      </div><!-- /audio section -->
+
+    </div><!-- /sp-content -->
+
+
+    <!-- ══════════════════════════════════════════
+         SIDEBAR
+    ══════════════════════════════════════════ -->
+    <aside class="sp-sidebar">
+
+      <!-- Profile Widget -->
+      <div class="sidebar-widget">
+        <div class="widget-header">👤 THE STAR</div>
+        <div class="widget-body">
+          <div class="profile-avatar">🧑‍💻</div>
+          <div class="profile-name">ROHIT</div>
+          <div class="profile-sub">B.Tech · Night Shift Legend · Chai Addict</div>
+          <div class="profile-stats">
+            <div class="p-stat">
+              <div class="p-stat-n">69</div>
+              <div class="p-stat-l">Videos</div>
+            </div>
+            <div class="p-stat">
+              <div class="p-stat-n">420</div>
+              <div class="p-stat-l">Photos</div>
+            </div>
+            <div class="p-stat">
+              <div class="p-stat-n">34</div>
+              <div class="p-stat-l">Chai Breaks</div>
+            </div>
+          </div>
+          <button class="subscribe-btn" onclick="handleSubscribe()">
+            ⭐ SUBSCRIBE TO ROAST HIM
+          </button>
+        </div>
+      </div>
+
+      <!-- Tags Widget -->
+      <div class="sidebar-widget">
+        <div class="widget-header">🏷️ POPULAR TAGS</div>
+        <div class="widget-body">
+          <div class="tag-cloud">
+            <div class="sp-tag">#ChaiBoy</div>
+            <div class="sp-tag">#NightShift</div>
+            <div class="sp-tag">#MaggiMaster</div>
+            <div class="sp-tag">#GymFail</div>
+            <div class="sp-tag">#SingleLifeRIP</div>
+            <div class="sp-tag">#247Tabs</div>
+            <div class="sp-tag">#EkAurGame</div>
+            <div class="sp-tag">#CallCenter</div>
+            <div class="sp-tag">#NehaSaint</div>
+            <div class="sp-tag">#RohitHub</div>
+            <div class="sp-tag">#SortOf</div>
+            <div class="sp-tag">#GoodLuck</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Disclaimer Widget -->
+      <div class="sidebar-widget disclaimer-widget">
+        <div class="widget-header">⚠️ DISCLAIMER</div>
+        <div class="widget-body">
+          <div class="disclaimer-text">
+            <strong>This is a parody website</strong> created with love (and mild roasting intent)
+            for <strong>Rohit's wedding.</strong><br><br>
+            All "videos", "photos" and "recordings" are fictional meme content.
+            No actual private content exists or is shared here.<br><br>
+            Rohit is a great guy. Neha is braver. We wish them both the best. 🧡<br><br>
+            <strong>—The Roast Committee</strong>
+          </div>
+        </div>
+      </div>
+
+      <!-- Back to Shaadi -->
+      <div class="sidebar-widget">
+        <div class="widget-header">💍 READY FOR REAL?</div>
+        <div class="widget-body" style="text-align:center">
+          <div style="font-size:36px;margin-bottom:12px">💒</div>
+          <div style="font-size:12px;line-height:1.7;color:var(--sp-gray);margin-bottom:14px">
+            You've seen the roast.<br>
+            Now come to the real event.<br>
+            <strong style="color:var(--sp-white)">April 15, 2026.</strong>
+          </div>
+          <a href="index.html" style="
+            display:block; background:var(--sp-orange); color:#fff;
+            border-radius:6px; padding:11px; text-align:center;
+            font-family:var(--sp-font); font-size:12px; font-weight:700;
+            letter-spacing:2px; text-decoration:none; transition:all 0.2s;
+          ">← BACK TO SHAADI SITE</a>
+        </div>
+      </div>
+
+    </aside><!-- /sidebar -->
+
+  </div><!-- /sp-main -->
+
+
+  <!-- ══════════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════════ -->
+  <footer class="sp-footer">
+    <div class="footer-logo">ROHIT<span>HUB</span></div>
+    <div class="footer-links">
+      <span class="footer-link">Privacy Policy (lol)</span>
+      <span class="footer-link">Terms of Service (unread)</span>
+      <span class="footer-link">DMCA (Rohit can try)</span>
+      <span class="footer-link">Contact Roast Committee</span>
+      <span class="footer-link">Join Premium (Free Khana)</span>
+    </div>
+    <div class="footer-disclaimer">
+      RohitHub is a fictional parody website created for entertainment purposes only,
+      specifically for the friends & family of Rohit who are attending his wedding on April 15, 2026.
+      All content is fictional. No real private material exists or is shared.
+      Rohit is a wonderful human being who deserves all the happiness.
+      <br><br>
+      © 2026 The Roast Committee · #RohitKeLLaagGaye · Made with 💀 and zero regrets
+    </div>
+  </footer>
+
+
+  <!-- ══════════════════════════════════════════
+       LIGHTBOX MODAL
+  ══════════════════════════════════════════ -->
+  <div id="lightbox">
+    <div class="lb-inner">
+      <div class="lb-header">
+        <div class="lb-title" id="lb-title">Loading...</div>
+        <button class="lb-close" onclick="closeLightbox()">✕</button>
+      </div>
+      <div class="lb-content" id="lb-content">
+        <!-- Populated by JS -->
+      </div>
+    </div>
+  </div>
+
+
+  <!-- JS -->
+  <script src="js/scandal-page.js?v=6"></script>
+
+</body>
+</html>

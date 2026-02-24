@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Rohit ki shaadi ho rahi hai. Sach mein. Hum bhi shocked hain." />
+  <title>BREAKING NEWS: Rohit Ki Shaadi 💀</title>
+
+  <!-- ── Google Fonts ── -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- ══════════════════════════════════════════
+       CSS — loaded in dependency order
+  ══════════════════════════════════════════ -->
+  <link rel="stylesheet" href="css/variables.css?v=8" />  <!-- 1. Design tokens -->
+  <link rel="stylesheet" href="css/base.css?v=8" />       <!-- 2. Reset + utilities -->
+  <link rel="stylesheet" href="css/loader.css?v=8" />     <!-- 3. Loader -->
+  <link rel="stylesheet" href="css/hero.css?v=8" />       <!-- 4. Hero section -->
+  <link rel="stylesheet" href="css/sections.css?v=8" />   <!-- 5. Exe, countdown, details, rules, why -->
+  <link rel="stylesheet" href="css/events.css?v=8" />     <!-- 6. Events table -->
+  <link rel="stylesheet" href="css/scandal.css?v=8" />    <!-- 7. Scandal section + modal -->
+  <link rel="stylesheet" href="css/final.css?v=8" />      <!-- 8. Final + footer -->
+  <link rel="stylesheet" href="css/responsive.css?v=8" /> <!-- 9. Mobile & tablet overrides (always last) -->
+</head>
+<body>
+
+
+  <audio id="audio-reveal" src="audio/reveal-sound.mp3" preload="auto"></audio>
+  <audio id="audio-click"  src="audio/click-sound.mp3"  preload="auto"></audio>
+
+
+  <!-- ══════════════════════════════════════════
+       LOADER
+  ══════════════════════════════════════════ -->
+  <div id="loader">
+    <div class="loader-skull">💀</div>
+    <div class="loader-headline">
+      ROHIT KA<br />
+      <span>LAUDA</span> LAAGNE<br />
+      JA RAHA HAI...
+    </div>
+    <div class="loader-sub">Please wait… processing commitment</div>
+    <div class="loader-bar">
+      <div class="loader-fill"></div>
+    </div>
+    <div class="loader-tap-hint">👆 tap anywhere to enable sound</div>
+  </div>
+
+
+  <!-- ══════════════════════════════════════════
+       SOUND TOGGLE (fixed top-right)
+  ══════════════════════════════════════════ -->
+  <button id="sound-btn" onclick="toggleSound()">🔊 SOUND: ON</button>
+
+
+  <!-- ══════════════════════════════════════════
+       SECTION 1 — HERO
+  ══════════════════════════════════════════ -->
+  <section id="hero">
+
+    <!-- Floating sticker decorations -->
+    <span class="stk stk-xl" style="top:9%;left:3%;--r:-8deg">💀</span>
+    <span class="stk stk-lg" style="top:14%;right:3%;--r:6deg;animation-delay:.6s">💍</span>
+    <span class="stk stk-md" style="bottom:20%;left:3%;--r:-5deg;animation-delay:1.1s">🕹️</span>
+    <span class="stk stk-md" style="bottom:24%;right:3%;--r:7deg;animation-delay:1.6s">📢</span>
+
+    <!-- Breaking news badge -->
+    <div class="breaking-pill">
+      <div class="red-dot"></div>
+      BREAKING NEWS
+    </div>
+
+    <!-- Hero headline -->
+    <h1 class="hero-title reveal">
+      <div>B-TECH KR K</div>
+      <div>CALLCENTER KA</div>
+      <div class="line-o">HERO</div>
+      <div class="line-strike">SINGLE</div>
+      <div class="line-o">NAHI RAHA 💀</div>
+    </h1>
+
+    <div class="photo-pair reveal">
+      <div class="photo-frame loaded" id="frame-rohit">
+        <img src="photos/rohit.jpg" alt="Rohit" />
+        <div class="photo-placeholder">🧑‍💻</div>
+        <div class="photo-label-bar">ROHIT.EXE</div>
+      </div>
+
+      <div class="plus-bubble">+</div>
+
+      <div class="photo-frame loaded" id="frame-neha">
+        <img src="photos/neha.jpg" alt="Neha" />
+        <div class="photo-placeholder">👰</div>
+        <div class="photo-label-bar">NEHA 2.0</div>
+      </div>
+    </div>
+
+    <!-- Info card -->
+    <div class="hero-card reveal">
+      <em>Rohit</em> — B.Tech CSE, Call Center Night Shift Legend,
+      Professional Chai Peene Wala.<br />
+      <em>Shaadi Kr Raha Hai.</em> 💍<br /><br />
+      Haan. Sach mein. Hum bhi shocked hain. 😐
+    </div>
+
+    <div class="scroll-hint">SCROLL KARO <span style="font-size:18px">↓</span></div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════
+       SECTION 2 — ROHIT.EXE
+  ══════════════════════════════════════════ -->
+  <section id="exe">
+    <div class="display-title reveal">ROHIT<span class="o">.EXE</span></div>
+
+    <div
+      class="reveal"
+      style="font-family:var(--font-display);font-size:clamp(32px,7vw,64px);color:var(--orange);text-align:center;margin-top:4px"
+    >+</div>
+
+    <div class="display-title reveal" style="color:var(--gold)">
+      NEHA<span class="o"> 2.0</span>
+    </div>
+
+    <!-- Git status terminal -->
+    <div class="git-box reveal">
+      <div class="cmd">$ git status</div>
+      <div class="gy">Changes to be committed:</div>
+      <div>&nbsp;&nbsp;&nbsp;<span class="gc">modified: &nbsp;Married.txt</span></div>
+      <div>&nbsp;&nbsp;&nbsp;<span class="gc">new file: &nbsp;Zimmedaari.exe</span></div>
+      <div>&nbsp;&nbsp;&nbsp;<span class="gr">deleted: &nbsp;&nbsp;SingleLife.mp4</span></div>
+      <div>&nbsp;&nbsp;&nbsp;<span class="gr">deleted: &nbsp;&nbsp;FreeTime.iso</span></div>
+      <br />
+      <div class="cmd">$ git commit -m "game over, no stash possible"</div>
+      <div class="gc">✓ Committed. No merge conflicts accepted.</div>
+      <div class="cmd">$ git push origin main --force</div>
+      <div class="gc">✓ Pushed. Cannot be undone. Good luck.</div>
+    </div>
+
+    <div class="reveal">
+      <span class="loc-pill">📍 Party Hall — abhi tak book nahi kiya hai...</span>
+    </div>
+
+    <!-- Floating sticker tags -->
+    <div class="tag-row reveal">
+      <div class="sticker-tag">☠️ Single Life Expired</div>
+      <div class="sticker-tag">🚫 No Refund No Return</div>
+      <div class="sticker-tag">📃 T&amp;C Unread</div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════
+       SECTION 3 — COUNTDOWN
+  ══════════════════════════════════════════ -->
+  <section id="countdown">
+    <div class="cd-title reveal">
+      ⏳ TIME LEFT UNTIL ROHIT KI LIFE OFFICIALLY KHATAM HO
+    </div>
+
+    <div class="cd-grid">
+      <div class="cd-box reveal d1">
+        <div class="cd-num" id="cd-d">00</div>
+        <div class="cd-label">DAYS</div>
+      </div>
+      <div class="cd-box reveal d2">
+        <div class="cd-num" id="cd-h">00</div>
+        <div class="cd-label">HOURS</div>
+      </div>
+      <div class="cd-box reveal d3">
+        <div class="cd-num" id="cd-m">00</div>
+        <div class="cd-label">MINS</div>
+      </div>
+      <div class="cd-box reveal d4">
+        <div class="cd-num" id="cd-s">00</div>
+        <div class="cd-label">SECS</div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════
+       SECTION 4 — EVENTS TIMELINE
+  ══════════════════════════════════════════ -->
+  <section id="events">
+    <div class="eyebrow reveal">📅 Schedule Dekhlo Bhai</div>
+    <div class="display-title reveal">EVENTS <span class="o">LINE-UP</span></div>
+
+    <div class="timeline">
+
+      <!-- Item 1 — Card LEFT, empty RIGHT -->
+      <div class="tl-item from-left">
+        <div class="tl-card-left">
+          <div class="tl-card" data-emoji="💍">
+            <div class="tl-date">12 APR 2026</div>
+            <div class="tl-name">Engagement 💍</div>
+            <div class="tl-note">Ring pehen liya toh pakka hai. No backsies.</div>
+          </div>
+        </div>
+        <div class="tl-dot">
+          <div class="tl-dot-circle">01</div>
+        </div>
+        <div class="tl-empty"></div>
+      </div>
+
+      <!-- Item 2 — empty LEFT, Card RIGHT -->
+      <div class="tl-item from-right">
+        <div class="tl-empty"></div>
+        <div class="tl-dot">
+          <div class="tl-dot-circle">02</div>
+        </div>
+        <div class="tl-card-right">
+          <div class="tl-card" data-emoji="🟡">
+            <div class="tl-date">13 APR 2026</div>
+            <div class="tl-name">Haldi 🟡</div>
+            <div class="tl-note">Rohit's yellow filter — no editing needed.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 3 — Card LEFT, empty RIGHT -->
+      <div class="tl-item from-left">
+        <div class="tl-card-left">
+          <div class="tl-card" data-emoji="🌿">
+            <div class="tl-date">14 APR 2026</div>
+            <div class="tl-name">Mehendi 🌿</div>
+            <div class="tl-note">Girls ka power hour. Boys wait outside.</div>
+          </div>
+        </div>
+        <div class="tl-dot">
+          <div class="tl-dot-circle">03</div>
+        </div>
+        <div class="tl-empty"></div>
+      </div>
+
+      <!-- Item 4 — MAIN EVENT: empty LEFT, Card RIGHT -->
+      <div class="tl-item main-event from-right">
+        <div class="tl-empty"></div>
+        <div class="tl-dot">
+          <div class="tl-dot-circle">★</div>
+        </div>
+        <div class="tl-card-right">
+          <div class="tl-card" data-emoji="🎺">
+            <div class="tl-date">15 APR 2026</div>
+            <div class="tl-name">★ BARAT + SHAADI 🎺</div>
+            <div class="tl-note">Main event. Attendance mandatory. No excuses accepted.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 5 — Card LEFT, empty RIGHT -->
+      <div class="tl-item from-left">
+        <div class="tl-card-left">
+          <div class="tl-card" data-emoji="🎉">
+            <div class="tl-date">16 APR 2026</div>
+            <div class="tl-name">Reception DLC 🎉</div>
+            <div class="tl-note">7 PM official → 9 PM actual. Indian timing enabled.</div>
+          </div>
+        </div>
+        <div class="tl-dot">
+          <div class="tl-dot-circle">05</div>
+        </div>
+        <div class="tl-empty"></div>
+      </div>
+
+    </div><!-- /timeline -->
+  </section>
+
+
+  <!-- ══════════════════════════════════════════
+       SECTION 5 — EVENT DETAILS
+  ══════════════════════════════════════════ -->
+  <section id="details">
+    <div class="eyebrow reveal">Detailed Info</div>
+    <div class="display-title reveal">EVENT <span class="o">DETAILS</span></div>
+
+    <div class="cards-grid">
+
+      <div class="dcard reveal d1" data-bg="🎺">
+        <div class="dc-eyebrow">The Ceremony</div>
+        <div class="dc-title">BARAAT</div>
+        <div class="dc-body">
+          Officially: <strong>6 PM</strong><br />
+          Actually: Depends on traffic + dulha confidence + how many uncles are doing bhangra at the gate
+        </div>
+      </div>
+
+      <div class="dcard c-orange reveal d2" data-bg="🎵">
+        <div class="dc-eyebrow">The Party</div>
+        <div class="dc-title">DJ TIME</div>
+        <div class="dc-body">
+          Same 5 songs on loop 🎵<br />
+          Random dance battles<br />
+          Unlimited cringe reels — create content or go home
+        </div>
+      </div>
+
+      <div class="dcard c-black reveal d3" data-bg="👗">
+        <div class="dc-eyebrow">Dress Code</div>
+        <div class="dc-title">INSTA READY</div>
+        <div class="dc-body">
+          Aise kapde pehno jisme tum Instagram pe cool lago.
+          Real life mein comfortable ho ya nahi — koi farak nahi. 😌
+        </div>
+      </div>
+
+      <div class="dcard reveal d4" data-bg="🕐">
+        <div class="dc-eyebrow">Reception DLC</div>
+        <div class="dc-title">7 PM*</div>
+        <div class="dc-body">
+          *Indian Timing Enabled 🇮🇳<br />
+          Actual start: <strong>9 PM</strong><br />
+          5000 selfies, 0 good photos, 1 buffet speedrun.
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════
+       SECTION 6 — GROUND RULES
+  ══════════════════════════════════════════ -->
+  <section id="rules">
+    <div class="eyebrow reveal">Mandatory Reading</div>
+    <div class="display-title reveal">GROUND <span class="o">RULES</span></div>
+
+    <div class="rules-wrap">
+      <div class="rule-row reveal">
+        <div class="rn">01</div>
+        <div>No judging outfits. <strong>Sab Shein/Meesho se hai.</strong> Tu bhi order karta hai, hum jaante hain. 🛍️</div>
+      </div>
+      <div class="rule-row reveal">
+        <div class="rn">02</div>
+        <div><strong>No shaadi advice.</strong> Rohit already committed hai. Save your energy for the buffet. 🤐</div>
+      </div>
+      <div class="rule-row reveal">
+        <div class="rn">03</div>
+        <div><strong>Reels banana allowed.</strong> Tag karo. Rohit ko roast karo. Ye content hai. 🎬</div>
+      </div>
+      <div class="rule-row reveal">
+        <div class="rn">04</div>
+        <div><strong>Meme material welcome.</strong> Jo bhi hua, hua. Sab ka blackmail collect karo. 📲</div>
+      </div>
+      <div class="rule-row reveal">
+        <div class="rn">05</div>
+        <div><strong>Buffet speedrun challenge</strong> is ON. Timer chal raha hai. Winner gets eternal bragging rights. 🍛</div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════
+       SECTION 7 — WHY YOU MUST COME
+  ══════════════════════════════════════════ -->
+  <section id="why">
+    <div class="eyebrow light reveal">Logical Reasons</div>
+    <div class="display-title why-title reveal">
+      WHY YOU <span class="ul-white">MUST</span> COME
+    </div>
+
+    <div class="why-grid">
+      <div class="why-card reveal d1">
+        <div class="wc-icon">🍛</div>
+        <div class="wc-text">Free Khana<small>Main attraction. No explanation needed. Period.</small></div>
+      </div>
+      <div class="why-card reveal d2">
+        <div class="wc-icon">🎤</div>
+        <div class="wc-text">Dulhe ko roast karne ka legal permission<small>Officially allowed. Rohit ne agree kiya hai (almost).</small></div>
+      </div>
+      <div class="why-card reveal d3">
+        <div class="wc-icon">📱</div>
+        <div class="wc-text">Lifetime blackmail content<small>Jo capture ho wo capture ho. No refund.</small></div>
+      </div>
+      <div class="why-card reveal d4">
+        <div class="wc-icon">🧑‍🤝‍🧑</div>
+        <div class="wc-text">Friends reunion<small>3 saal ghosting ke baad. Awkward hugs incoming.</small></div>
+      </div>
+      <div class="why-card reveal">
+        <div class="wc-icon">🐸</div>
+        <div class="wc-text">Shaadi memes live generate honge<small>You're witnessing history. Touch grass for once.</small></div>
+      </div>
+      <div class="why-card reveal">
+        <div class="wc-icon">💃</div>
+        <div class="wc-text">Dance floor is yours<small>Same 5 songs. Tu wahi 10 steps karta reh. We believe in you.</small></div>
+      </div>
+    </div>
+
+    <div class="warn-box reveal">
+      <div class="warn-head">⚠️ WARNING !</div>
+      Agar nahi aaye → next 10 saal tak group chat mein troll honge.
+      <strong>Rohit personally ensure karega.</strong>
+      Tumhara attendance = tumhara survival. Choose wisely.
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════
+       SECTION 8 — SCANDAL PAGE
+  ══════════════════════════════════════════ -->
+  <section id="scandal">
+    <div class="scandal-bg-text">RECEIPTS</div>
+
+    <div class="scandal-title-main reveal">
+      🔐 ROHIT KI<br />SCANDAL PAGE
+    </div>
+
+    <div class="scandal-sub reveal">
+      Ek aisa page jahan Rohit ki life ke sabse
+      <em>embarrassing</em> moments documented hain.
+      Sab ko access milega. <em>Rohit ko nahi pata.</em>
+    </div>
+
+    <a href="scandal.html" class="scandal-open-btn">
+      UNLOCK THE RECEIPTS 🧾
+    </a>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════
+       SECTION 9 — FINAL / HASHTAGS
+  ══════════════════════════════════════════ -->
+  <section id="final">
+    <div class="eyebrow reveal">Gifts</div>
+    <div class="display-title reveal">NO GIFTS <span class="o">PLZ 🙏</span></div>
+
+    <p class="final-body-text reveal">
+      Gifts already given. But if you insist on showing love through currency…
+    </p>
+
+    <div class="payment-chips">
+      <div class="p-chip reveal d1">💸 UPI</div>
+      <div class="p-chip reveal d2">📲 Paytm</div>
+      <div class="p-chip reveal d3">₿ Crypto</div>
+      <div class="p-chip reveal d4">🤝 Apna pyaar kaafi hai</div>
+    </div>
+
+    <div class="final-quote reveal">
+      Shaadi ek<br />
+      emotional decision nahi…<br />
+      <span class="ul">ek group project hai.</span>
+    </div>
+
+    <p class="final-cta reveal">
+      Aao aur iss project ko <strong>successful banao.</strong> 🚀
+    </p>
+
+    <!-- Hashtag wall — click any to copy -->
+    <div class="hashtag-wall">
+      <div class="htag reveal d1" onclick="copyTag(this)">#RohitKeLLaagGaye</div>
+      <div class="htag reveal d2" onclick="copyTag(this)">#LadkeKiLifeGayi</div>
+      <div class="htag reveal d3" onclick="copyTag(this)">#GameOverSingleLife</div>
+      <div class="htag reveal d4" onclick="copyTag(this)">#ShaadiUpdateInstalled</div>
+      <div class="htag reveal d5" onclick="copyTag(this)">#RohitNeha2026</div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════════ -->
+  <footer>
+    Made with 💀 and <span>zero regrets</span> ·
+    <span>#RohitKeLLaagGaye</span> · © 2026 Rohit &amp; Neha<br />
+    All rights reserved. Rohit's freedom — not included.
+  </footer>
+
+
+  <!-- Scandal content moved to scandal.html (separate page) -->
+
+
+  <!-- ══════════════════════════════════════════
+       JS — ES Module entry point
+       type="module" enables import/export syntax.
+       Defer is implicit with type=module.
+  ══════════════════════════════════════════ -->
+  <script type="module" src="js/main.js?v=8"></script>
+
+</body>
+</html>

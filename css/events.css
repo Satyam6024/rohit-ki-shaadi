@@ -1,0 +1,337 @@
+/* ============================================================
+   EVENTS TIMELINE — events.css
+   Zigzag scroll-animated timeline. Cards alternate left/right
+   with a central dashed line and dot markers.
+   Inspired by DuckCoin / PugCoin roadmap style.
+============================================================ */
+
+/* ── Section wrapper ── */
+#events {
+  background: var(--cream);
+  padding: var(--section-pad);
+  overflow: hidden;
+}
+
+/* ── Timeline outer container ── */
+.timeline {
+  position: relative;
+  max-width: 860px;
+  margin: clamp(40px, 7vw, 72px) auto 0;
+  padding: 0 16px;
+}
+
+/* ── Central vertical dashed line ── */
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  transform: translateX(-50%);
+  background: repeating-linear-gradient(
+    to bottom,
+    var(--black) 0px,
+    var(--black) 12px,
+    transparent 12px,
+    transparent 22px
+  );
+  opacity: 0.18;
+  z-index: 0;
+}
+
+/* ══════════════════════════════
+   TIMELINE ITEM
+   Each item = emoji + dot + card
+   Alternates: left card, right card
+══════════════════════════════ */
+.tl-item {
+  display: grid;
+  grid-template-columns: 1fr 60px 1fr;
+  align-items: center;
+  gap: 0;
+  margin-bottom: clamp(32px, 6vw, 56px);
+  position: relative;
+  z-index: 1;
+}
+
+/* ── Dot in the center column ── */
+.tl-dot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  z-index: 2;
+}
+
+.tl-dot-circle {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--black);
+  color: #fff;
+  font-family: var(--font-display);
+  font-size: 18px;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 4px solid var(--cream);
+  box-shadow: 0 0 0 3px var(--black), var(--shadow);
+  flex-shrink: 0;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.tl-item.main-event .tl-dot-circle {
+  background: var(--orange);
+  box-shadow: 0 0 0 3px var(--orange), 0 0 24px rgba(255,107,0,0.35);
+  width: 60px;
+  height: 60px;
+  font-size: 20px;
+}
+
+.tl-item:hover .tl-dot-circle {
+  transform: scale(1.12);
+}
+
+/* ── Card (shared) ── */
+.tl-card {
+  background: #fff;
+  border: 3px solid var(--black);
+  border-radius: 20px;
+  padding: clamp(18px, 3.5vw, 28px) clamp(16px, 3vw, 26px);
+  box-shadow: var(--shadow);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.25s ease;
+  will-change: transform;
+}
+
+.tl-card:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Card emoji watermark */
+.tl-card::after {
+  content: attr(data-emoji);
+  position: absolute;
+  bottom: -8px;
+  right: -4px;
+  font-size: 64px;
+  opacity: 0.07;
+  line-height: 1;
+  pointer-events: none;
+}
+
+/* Main event card: black bg */
+.tl-item.main-event .tl-card {
+  background: var(--black);
+  color: #fff;
+  border-color: var(--orange);
+  box-shadow: 8px 8px 0 var(--orange);
+}
+
+.tl-item.main-event .tl-card:hover {
+  box-shadow: 10px 10px 0 var(--orange);
+}
+
+/* ── Card date ── */
+.tl-date {
+  font-family: var(--font-display);
+  font-size: clamp(11px, 2.5vw, 14px);
+  letter-spacing: 3px;
+  color: var(--orange);
+  margin-bottom: 6px;
+}
+
+.tl-item.main-event .tl-date {
+  color: var(--gold);
+}
+
+/* ── Card title ── */
+.tl-name {
+  font-family: var(--font-mono);
+  font-size: clamp(16px, 3.2vw, 22px);
+  font-weight: 700;
+  line-height: 1.25;
+  margin-bottom: 6px;
+}
+
+/* ── Card note ── */
+.tl-note {
+  font-family: var(--font-mono);
+  font-size: clamp(11px, 2vw, 13px);
+  color: var(--gray);
+  line-height: 1.6;
+}
+
+.tl-item.main-event .tl-note {
+  color: rgba(255,255,255,0.55);
+}
+
+/* ── Connector lines (card → dot) ── */
+/* Arrow/line stub from card edge to dot */
+.tl-card-left,
+.tl-card-right {
+  position: relative;
+}
+
+/* Left card: arrow points right */
+.tl-card-left .tl-card::before {
+  content: '';
+  position: absolute;
+  right: -14px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 7px solid transparent;
+  border-left-color: var(--black);
+  z-index: 3;
+}
+
+.tl-item.main-event .tl-card-left .tl-card::before {
+  border-left-color: var(--orange);
+}
+
+/* Right card: arrow points left */
+.tl-card-right .tl-card::before {
+  content: '';
+  position: absolute;
+  left: -14px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 7px solid transparent;
+  border-right-color: var(--black);
+  z-index: 3;
+}
+
+.tl-item.main-event .tl-card-right .tl-card::before {
+  border-right-color: var(--orange);
+}
+
+/* Empty side (no card — just blank space) */
+.tl-empty {
+  /* intentionally empty — fills the grid column */
+}
+
+/* ══════════════════════════════
+   SCROLL ANIMATION STATES
+   Items slide in from left or right
+   JS adds .tl-visible class
+══════════════════════════════ */
+.tl-item {
+  opacity: 0;
+  transition: opacity 0.65s ease, transform 0.65s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: opacity, transform;
+}
+
+/* Left-side card items slide from left */
+.tl-item.from-left {
+  transform: translateX(-60px);
+}
+
+/* Right-side card items slide from right */
+.tl-item.from-right {
+  transform: translateX(60px);
+}
+
+/* Visible state — triggered by IntersectionObserver */
+.tl-item.tl-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Stagger for dot pop */
+.tl-item.tl-visible .tl-dot-circle {
+  animation: dot-pop 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) 0.3s both;
+}
+
+@keyframes dot-pop {
+  from { transform: scale(0); }
+  to   { transform: scale(1); }
+}
+
+
+/* ══════════════════════════════
+   RESPONSIVE — TABLET
+   (≤ 640px: collapse to single column)
+══════════════════════════════ */
+@media (max-width: 640px) {
+
+  /* Remove the central line */
+  .timeline::before {
+    left: 28px;
+    transform: none;
+  }
+
+  /* Single column: dot on left, card on right */
+  .tl-item {
+    grid-template-columns: 56px 1fr;
+    grid-template-areas:
+      "dot card";
+    gap: 14px;
+    align-items: flex-start;
+  }
+
+  /* Force all items to slide from left on mobile */
+  .tl-item.from-right {
+    transform: translateX(-40px);
+  }
+  .tl-item.from-left {
+    transform: translateX(-40px);
+  }
+
+  .tl-dot      { grid-area: dot; padding-top: 4px; }
+  .tl-dot-circle {
+    width: 44px;
+    height: 44px;
+    font-size: 14px;
+    box-shadow: 0 0 0 2px var(--black);
+  }
+
+  .tl-item.main-event .tl-dot-circle {
+    width: 48px;
+    height: 48px;
+  }
+
+  /* Card always goes on right */
+  .tl-card-left,
+  .tl-card-right  { grid-area: card; }
+
+  /* Hide empty slot */
+  .tl-empty       { display: none; }
+
+  /* Remove arrow stubs on mobile */
+  .tl-card-left .tl-card::before,
+  .tl-card-right .tl-card::before {
+    display: none;
+  }
+
+  /* Fix card sizing */
+  .tl-card {
+    padding: 16px 16px;
+    border-radius: 14px;
+  }
+
+  .tl-card::after {
+    font-size: 44px;
+  }
+}
+
+@media (max-width: 360px) {
+  .timeline::before {
+    left: 22px;
+  }
+
+  .tl-item {
+    grid-template-columns: 48px 1fr;
+    gap: 10px;
+  }
+
+  .tl-dot-circle {
+    width: 38px;
+    height: 38px;
+    font-size: 12px;
+  }
+}

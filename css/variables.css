@@ -1,0 +1,47 @@
+/* ============================================================
+   DESIGN TOKENS — variables.css
+   All colors, sizes, shadows, and spacing live here.
+   Change here → changes everywhere.
+============================================================ */
+
+:root {
+  /* Colors */
+  --orange:  #FF6B00;
+  --gold:    #FFB800;
+  --black:   #0A0A0A;
+  --white:   #FAFAFA;
+  --cream:   #FFF8EE;
+  --green:   #00C851;
+  --red:     #FF3B30;
+  --gray:    #888888;
+
+  /* Typography */
+  --font-display: 'Bebas Neue', sans-serif;
+  --font-mono:    'Space Mono', monospace;
+
+  /* Sizing */
+  --radius:      20px;
+  --radius-sm:   10px;
+  --radius-pill: 50px;
+
+  /* Shadows */
+  --shadow:    5px 5px 0px var(--black);
+  --shadow-lg: 8px 8px 0px var(--black);
+  --shadow-xl: 14px 14px 0px var(--black);
+
+  /* Spacing scale */
+  --space-xs:  8px;
+  --space-sm:  16px;
+  --space-md:  24px;
+  --space-lg:  40px;
+  --space-xl:  64px;
+  --space-2xl: 110px;
+
+  /* Section padding (responsive via clamp) */
+  --section-pad: clamp(64px, 10vw, 110px) clamp(16px, 5vw, 40px);
+
+  /* Max widths */
+  --max-content: 1020px;
+  --max-text:    720px;
+  --max-card:    580px;
+}
