@@ -12,12 +12,8 @@ const AgeGate = (() => {
   const gate = document.getElementById('age-gate');
 
   function confirm() {
-    // YES — collegemate confirmed → go to college memories page
-    gate.style.transition = 'opacity 0.4s ease';
-    gate.style.opacity    = '0';
-    setTimeout(() => {
-      window.location.href = 'college.html';
-    }, 400);
+    // YES — collegemate confirmed → redirect immediately to avoid flash of background page
+    window.location.replace('college.html');
   }
 
   function deny() {
